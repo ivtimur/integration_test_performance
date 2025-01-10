@@ -8,5 +8,5 @@ flutter drive --driver=test_driver/perf_driver.dart --target=integration_test/ch
 
 # Result
 - See result at:
-[link](./build/scrolling_timeline_iterable.timeline_summary.json)
-[link](./build/scrolling_timeline_list.timeline_summary.json)
+[scrolling_timeline_iterable.timeline_summary](./scrolling_timeline_iterable.timeline_summary.json)
+[scrolling_timeline_list.timeline_summary](./scrolling_timeline_list.timeline_summary.json)

@@ -42,6 +42,7 @@ Future<void> main() {
 
       await summary.writeTimelineToFile(
         fileName,
+        destinationDirectory: './',
         pretty: true,
         includeSummary: true,
       );
