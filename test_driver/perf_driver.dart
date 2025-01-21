@@ -26,19 +26,11 @@ Future<void> main() {
       if (dataTest is Map<String, dynamic>) {
         final timeline = driver.Timeline.fromJson(dataTest);
 
-        // Convert the Timeline into a TimelineSummary that's easier to
-        // read and understand.
         summary = driver.TimelineSummary.summarize(timeline);
       } else {
         summary =
             driver.TimelineSummary.summarize(Timeline.fromJson({'NoData': ''}));
       }
-
-      // Then, write the entire timeline to disk in a json format.
-      // This file can be opened in the Chrome browser's tracing tools
-      // found by navigating to chrome://tracing.
-      // Optionally, save the summary to disk by setting includeSummary
-      // to true
 
       await summary.writeTimelineToFile(
         fileName,
