@@ -18,7 +18,7 @@ void main() {
         await tester.pumpAndSettle();
 
         final listFinder = find.byType(Scrollable);
-        final itemFinder = find.byKey(Key('item_500_text'));
+        final itemFinder = find.byKey(Key('item_500_msg'));
 
         // Scroll until the item to be found appears.
         await tester.scrollUntilVisible(

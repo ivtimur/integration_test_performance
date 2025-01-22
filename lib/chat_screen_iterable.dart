@@ -19,7 +19,6 @@ class _ChatScreenIterableState extends State<ChatScreenIterable> {
   @override
   void initState() {
     super.initState();
-    // Добавляем 100 тестовых сообщений
     messages = widget.items;
   }
 
