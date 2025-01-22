@@ -44,25 +44,23 @@ class _ChatScreenListState extends State<ChatScreenList> {
             child: ListView.builder(
               itemCount: messages.length,
               itemBuilder: (context, index) {
-                return 
-  ListTile(
-    key: Key('item_${index}_msg'),
-    title: Align(
-      alignment: messages.elementAt(index).startsWith('Me: ')
-          ? Alignment.centerRight
-          : Alignment.centerLeft,
-      child: Container(
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.symmetric(vertical: 5),
-        color: messages.elementAt(index).startsWith('Me: ')
-            ? Colors.blue[100]
-            : Colors.grey[300],
-        child: Text(
-          messages.elementAt(index),
-        ),
-      ),
-    ),
-  );
+                final element = messages[index];
+                return ListTile(
+                  key: Key('item_${index}_msg'),
+                  title: Align(
+                    alignment: element.startsWith('Me: ')
+                        ? Alignment.centerRight
+                        : Alignment.centerLeft,
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      margin: EdgeInsets.symmetric(vertical: 5),
+                      color: element.startsWith('Me: ')
+                          ? Colors.blue[100]
+                          : Colors.grey[300],
+                      child: Text(element),
+                    ),
+                  ),
+                );
               },
             ),
           ),

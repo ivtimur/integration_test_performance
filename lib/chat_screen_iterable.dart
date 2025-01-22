@@ -46,6 +46,7 @@ class _ChatScreenIterableState extends State<ChatScreenIterable> {
               itemCount: messages.length,
               itemBuilder: (context, index) {
                 return ListTile(
+                  key: Key('item_${index}_msg'),
                   title: Align(
                     alignment: messages.elementAt(index).startsWith('Me: ')
                         ? Alignment.centerRight
@@ -58,7 +59,6 @@ class _ChatScreenIterableState extends State<ChatScreenIterable> {
                           : Colors.grey[300],
                       child: Text(
                         messages.elementAt(index),
-                        key: Key('item_${index}_text'),
                       ),
                     ),
                   ),
